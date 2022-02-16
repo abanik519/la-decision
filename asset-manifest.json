@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/la-decision/static/css/main.3aece7e5.css",
-    "main.js": "/la-decision/static/js/main.a85eb137.js",
+    "main.css": "/la-decision/static/css/main.578c68cf.css",
+    "main.js": "/la-decision/static/js/main.afba3192.js",
     "static/js/787.0ebf9987.chunk.js": "/la-decision/static/js/787.0ebf9987.chunk.js",
-    "static/media/Media2.mp3": "/la-decision/static/media/Media2.494d15252f3e87b5c183.mp3",
+    "static/media/end.mp3": "/la-decision/static/media/end.0360932c6d6f26894435.mp3",
     "static/media/Media1.mp3": "/la-decision/static/media/Media1.94e589fe5476409f269a.mp3",
     "static/media/Century Gothic.ttf": "/la-decision/static/media/Century Gothic.b194aa2bd524e2c973f7.ttf",
     "static/media/01.jpg": "/la-decision/static/media/01.615750841633af96b379.jpg",
@@ -18,12 +18,12 @@
     "static/media/04.jpg": "/la-decision/static/media/04.850d4d21c8809c167349.jpg",
     "static/media/Avatar.png": "/la-decision/static/media/Avatar.01842f6936c3117820fd.png",
     "index.html": "/la-decision/index.html",
-    "main.3aece7e5.css.map": "/la-decision/static/css/main.3aece7e5.css.map",
-    "main.a85eb137.js.map": "/la-decision/static/js/main.a85eb137.js.map",
+    "main.578c68cf.css.map": "/la-decision/static/css/main.578c68cf.css.map",
+    "main.afba3192.js.map": "/la-decision/static/js/main.afba3192.js.map",
     "787.0ebf9987.chunk.js.map": "/la-decision/static/js/787.0ebf9987.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3aece7e5.css",
-    "static/js/main.a85eb137.js"
+    "static/css/main.578c68cf.css",
+    "static/js/main.afba3192.js"
   ]
 }
