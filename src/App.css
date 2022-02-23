@@ -36,6 +36,15 @@
   .highlight{
     background-color: lightgray;
   }
+
+  #recordButton{
+    background-color: green;
+    padding: 10px 20px 10px 20px;
+    margin: 1em;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
   
   .flex-start{
     display: flex;
@@ -51,11 +60,13 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      width: 100%;
   }
   
   .fa-arrow-left {
       -webkit-animation: bounceLeft 2s infinite;
       animation: bounceLeft 2s infinite;
+      width: 100%;
     }
   
   /* Fading animation */
@@ -206,6 +217,7 @@
         align-items: flex-start;
         justify-self: flex-start;
         align-self: flex-start;
+        width: 100%;
     }
   
     .avatar{

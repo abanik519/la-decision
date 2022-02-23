@@ -13,7 +13,7 @@ import image10 from "./images/16.jpg";
 import avatar from "./images/Avatar.png";
 import pause from "./images/pause.png";
 import play from "./images/play.png";
-import audioClip from "./sounds/Media2.mp3";
+import audioClip from "./sounds/end.mp3";
 import introClip from "./sounds/Media1.mp3";
 
 
@@ -142,6 +142,17 @@ export class App extends Component {
     document.getElementById(id).style.fontWeight = "bold";
   }
 
+  record(){
+    if(document.getElementById("recordButton")){
+      if(document.getElementById("recordButton").innerHTML == "ENREGISTRER"){
+        document.getElementById("recordButton").innerHTML = "PAUSE"
+      }
+      else{
+        document.getElementById("recordButton").innerHTML = "ENREGISTRER"
+      }
+    }
+  }
+
   render() {
     return (
       <div id='book'>
@@ -149,7 +160,7 @@ export class App extends Component {
         <div className="phoneText">Not available on this device</div>
 
         <div className="slideshow-container">
-            <div className="title">Les  enfants de cire</div>
+            <div className="title">La décision</div>
             <div className="slide-container">
                 <div className="arrow-container">
                     <div className="next" id="p" onClick={() => this.plusSlides(-1)}>&#10094;</div>
@@ -159,10 +170,10 @@ export class App extends Component {
                 {/* Intro Slide */}
                 <div className="slide fade" style={{display: "flex"}}>
                     <div className="image-container">
-                        <img className="image" src={image01}/>
+                        <img className="image" src={image01} alt="Intro page image"/>
                         <div className="avatar-container">
                           <div className="flex-row">
-                            <img className="avatar" src={avatar} onClick={() => {this.show('intro'); this.toggleSound('intro-sound'); this.hide('click1'); this.showNext();}}/>
+                            <img className="avatar" src={avatar} alt="Owl avatar" onClick={() => {this.show('intro'); this.toggleSound('intro-sound'); this.hide('click1'); this.showNext();}}/>
                             <i id="click1" class="fa fa-arrow-left">&larr;Appuie ici</i>
                           </div>
                         </div>
@@ -178,10 +189,10 @@ export class App extends Component {
                 {/* Slide 1 */}
                 <div className="slide fade">
                     <div className="image-container">
-                        <img className="image" src={image02}/>
+                        <img className="image" src={image02} alt="First page image"/>
                         <div className="avatar-container">
                           <div className="flex-row">
-                            <img className="avatar" src={avatar} onClick={() => {this.toggle('s1'); this.hide('click2'); this.showNext()}}/>
+                            <img className="avatar" src={avatar} alt="Owl avatar" onClick={() => {this.toggle('s1'); this.hide('click2'); this.showNext()}}/>
                             <i id="click2" class="fa fa-arrow-left">&larr;Appuie ici</i>
                           </div>
                           <p>Mon village a beaucoup de problèmes. Nous faisons la queue pour aller chercher de l’eau d’un seul robinet.</p>
@@ -194,10 +205,10 @@ export class App extends Component {
                 {/* Slide 2 */}
                 <div className="slide fade">
                     <div className="image-container">
-                        <img className="image" src={image03}/>
+                        <img className="image" src={image03} alt="Second page image"/>
                         <div className="avatar-container">
                             <div className="flex-row">
-                              <img className="avatar" src={avatar} onClick={() => {this.showNext(); this.hide('click3'); this.toggle('s2')}}/>
+                              <img className="avatar" src={avatar} alt="Owl avatar" onClick={() => {this.showNext(); this.hide('click3'); this.toggle('s2')}}/>
                               <i id="click3" class="fa fa-arrow-left">&larr;Appuie ici</i>
                             </div>
                             <p>Nous attendons la nourriture donnée par les autres.</p>
@@ -207,10 +218,10 @@ export class App extends Component {
                 {/* Slide 3 */}
                 <div className="slide fade">
                     <div className="image-container">
-                        <img className="image" src={image04}/>
+                        <img className="image" src={image04} alt="Third page image"/>
                         <div className="avatar-container">
                             <div className="flex-row">
-                              <img className="avatar" src={avatar} onClick={() => {this.showNext(); this.hide('click4'); this.toggle('s3')}}/>
+                              <img className="avatar" src={avatar} alt="Owl avatar" onClick={() => {this.showNext(); this.hide('click4'); this.toggle('s3')}}/>
                               <i id="click4" class="fa fa-arrow-left">&larr;Appuie ici</i>
                             </div>
                             <p>Nous barrons nos maisons tôt à cause des voleurs.
@@ -221,10 +232,10 @@ export class App extends Component {
                 {/* Slide 4 */}
                 <div className="slide fade">
                     <div className="image-container">
-                        <img className="image" src={image05}/>
+                        <img className="image" src={image05} alt="Fourth page image"/>
                         <div className="avatar-container">
                             <div className="flex-row">
-                              <img className="avatar" src={avatar} onClick={() => {this.showNext(); this.hide('click5'); this.toggle('s4')}}/>
+                              <img className="avatar" src={avatar} alt="Owl avatar" onClick={() => {this.showNext(); this.hide('click5'); this.toggle('s4')}}/>
                               <i id="click5" class="fa fa-arrow-left">&larr;Appuie ici</i>
                             </div>
                             <p>Puis un jour, le robinet se tarit et nos conteneurs sont restés vides et nous n’avons plus d’eau.
@@ -235,9 +246,9 @@ export class App extends Component {
                 {/* Slide 5 */}
                 <div className="slide fade">
                     <div className="image-container">
-                        <img className="image" src={image06}/>
+                        <img className="image" src={image06} alt="Fifth page image"/>
                         <div className="avatar-container">
-                            <img className="avatar" src={avatar} onClick={() => {this.showNext(); this.toggle('s5')}}/>
+                            <img className="avatar" src={avatar} alt="Owl avatar" onClick={() => {this.showNext(); this.toggle('s5')}}/>
                             <p>Par la suite, mon père marche de maison en maison et demande aux gens de venir à une réunion du village.
                             </p>
                         </div>
@@ -246,9 +257,9 @@ export class App extends Component {
                 {/* Slide 6 */}
                 <div className="slide fade">
                     <div className="image-container">
-                        <img className="image" src={image07}/>
+                        <img className="image" src={image07} alt="Sixth page image"/>
                         <div className="avatar-container">
-                            <img className="avatar" src={avatar}  onClick={() => {this.showNext(); this.toggle('s6')}}/>
+                            <img className="avatar" src={avatar} alt="Owl avatar"  onClick={() => {this.showNext(); this.toggle('s6')}}/>
                             <p>Les gens se rassemblent sous un grand arbre et écoutent. 
                             </p>
                         </div>
@@ -257,10 +268,10 @@ export class App extends Component {
                 {/* Slide 7 */}
                 <div className="slide fade">
                     <div className="image-container">
-                        <img className="image" src={image08}/>
+                        <img className="image" src={image08} alt="Seventh page image"/>
                         <div className="avatar-container">
-                            <img className="avatar" src={avatar} onClick={() => {this.showNext(); this.toggle('s7')}}/>
-                            <p>Mon père se lève et dit, « Il faut travailler ensemble pour résoudre nos problèmes. 
+                            <img className="avatar" src={avatar} alt="Owl avatar" onClick={() => {this.showNext(); this.toggle('s7')}}/>
+                            <p>Mon père se lève et dit, « Il faut travailler ensemble pour résoudre nos problèmes ». 
                             </p>
                         </div>
                     </div>
@@ -268,10 +279,10 @@ export class App extends Component {
                 {/* Slide 8 */}
                 <div className="slide fade">
                     <div className="image-container">
-                        <img className="image" src={image09}/>
+                        <img className="image" src={image09} alt="Eight page image"/>
                         <div className="avatar-container">
-                            <img className="avatar" src={avatar} onClick={() => {this.showNext(); this.toggle('s8')}}/>
-                            <p>Une femme dit, « Les femmes peuvent me joindre pour/m’aider à faire pousser de la nourriture.
+                            <img className="avatar" src={avatar} alt="Owl avatar" onClick={() => {this.showNext(); this.toggle('s8')}}/>
+                            <p>Une femme dit, « Les femmes peuvent m’aider à faire pousser de la nourriture ».
                             </p>
                         </div>
                     </div>
@@ -280,9 +291,9 @@ export class App extends Component {
                 {/* Slide 9 */}
                 <div className="slide fade">
                     <div className="image-container">
-                        <img className="image" src={image10}/>
+                        <img className="image" src={image10} alt="Ninth page image"/>
                         <div className="avatar-container">
-                            <img className="avatar" src={avatar} onClick={() => {this.showNext(); this.toggle('s9')}}/>
+                            <img className="avatar" src={avatar} alt="Owl avatar" onClick={() => {this.showNext(); this.toggle('s9')}}/>
                             <p>Nous criions tous d’une seule voix, « Nous devons changer nos vies. » Depuis ce jour, nous travaillons ensemble pour résoudre nos problèmes.
                             </p>
                         </div>
@@ -292,9 +303,9 @@ export class App extends Component {
                 {/* Slide 10 */}
                 <div className="slide fade">
                     <div className="image-container">
-                        <img className="image" src={image01}/>
+                        <img className="image" src={image01} alt="Tenth page image"/>
                         <div className="avatar-container">
-                            <img className="avatar" src={avatar} onClick={() => {this.showNext(); this.toggle('s10')}}/>
+                            <img className="avatar" src={avatar} alt="Owl avatar" onClick={() => {this.showNext(); this.toggle('s10')}}/>
                             <p>Et lorsque le soleil se lève, il s’envole vers la lumière du matin en chantant.
                             </p>
                         </div>
@@ -303,7 +314,7 @@ export class App extends Component {
                 {/* Question Slide Intro */}
                 <div className="slide fade">
                     <div className="question-prompt-container">
-                        <p>Tu as lu l’histoire « La décision. » Appuie sur le bouton vert « RECORD » et dis-moi l’histoire du début à la fin. Dis-moi tous les événements et détails dont tu te souviens. You have read the story "La décision." Press the green "RECORD" button and tell us the story from the beginning to the end. Include all the events and details that you can remember.</p>
+                        <p>Tu as lu l’histoire « La décision. » Appuie sur le bouton vert « ENREGISTRER » et raconte-moi l’histoire du début à la fin. Dis-moi tous les événements et détails dont tu te souviens. You have read the story "La décision". Press the green "Enregistrer" button and tell us the story from the beginning to the end. Include all the events and details that you can remember. </p>
                     </div>
                     <div className="audio-controls-container">
                         <audio id="story-retel" onPlay={this.updateTime}>
@@ -311,6 +322,7 @@ export class App extends Component {
                         </audio>
                         <img className="audio-button" id="play" src={play} onClick={() => {this.playQuestion(); this.showNext()}}/>
                         <img className="audio-button" id="pause" style={{display: 'none'}} src={pause} onClick={this.pauseQuestion}/>
+                        <div id='recordButton' onClick={this.record}>ENREGISTRER</div>
                     </div>
                 </div>    
                 <div className="slide fade">
